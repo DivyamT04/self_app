@@ -4,6 +4,7 @@ import 'package:self_app/screens/wishlist/wishlist_screen.dart';
 import '../models/category_model.dart';
 import '../models/product_model.dart';
 import '../screens/catalog/catalog_screen.dart';
+import '../screens/checkout/checkout_screen.dart';
 import '../screens/home/home.dart';
 import '../screens/product/product_screen.dart';
 import '../screens/splash/splash_screen.dart';
@@ -26,6 +27,8 @@ class AppRouter{
         return WishListScreen.route();
       case CatalogScreen.routeName:
         return CatalogScreen.route(category: settings.arguments as Categorym);
+      case CheckoutScreen.routeName:
+        return CheckoutScreen.route();
 
       default:
         return _errorRoute();

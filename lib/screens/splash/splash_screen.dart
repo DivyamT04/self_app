@@ -15,22 +15,18 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 2), () => Navigator.pushNamed(context, '/'));
+    Timer(Duration(seconds: 4), () => Navigator.pushNamed(context, '/'));
     return Scaffold(
       body: Container(
-        color: Colors.grey[100],
+        color: Colors.brown[100],
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: Image(
-                image: AssetImage('assets/images/logo-symbol.png'),
-                width: 400,
-                height: 400,
-              ),
+              child: Image.network('https://plus.unsplash.com/premium_photo-1670462145715-c32d0c91e81b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1600&q=80'),
             ),
             SizedBox(
-              height: 10,
+              height: 20,
             ),
             Container(
               color: Colors.black,
